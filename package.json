@@ -1,0 +1,23 @@
+{
+  "name": "docx-from-html",
+  "version": "1.0.0",
+  "description": "Make simple docx files from html code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brockfanning/docx-from-html.git"
+  },
+  "author": "brockfanning@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brockfanning/docx-from-html/issues"
+  },
+  "homepage": "https://github.com/brockfanning/docx-from-html#readme",
+  "dependencies": {
+    "cheerio": "1.0.0-rc.3",
+    "officegen": "0.6.4"
+  }
+}
