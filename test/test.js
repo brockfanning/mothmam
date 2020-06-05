@@ -1,4 +1,6 @@
-var expect = require('chai').expect;
+const { expect } = require('chai')
+const { convertToHtml } = require('mammoth')
+const docxFromHtml = require('../lib/index')
 
 const testSnippets = [
     '<p>Hello world</p>',
@@ -9,12 +11,10 @@ const testSnippets = [
 
 for (const testSnippet of testSnippets) {
     describe(testSnippet, function() {
-        it('should be unchanged after converting from HTML and back', function() {
-            expect(convertFromHtmlAndBack(testSnippet)).to.be.equal(testSnippet)
+        it('should be unchanged after converting from HTML and back', async () => {
+            const wordFromHtml = await docxFromHtml(testSnippet)
+            const htmlFromWord = await convertToHtml({ buffer: wordFromHtml})
+            expect(htmlFromWord.value).to.be.equal(testSnippet)
         })
     })
-}
-
-function convertFromHtmlAndBack(html) {
-    return html
 }
