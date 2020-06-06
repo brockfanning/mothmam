@@ -11,7 +11,8 @@ const testSnippets = {
     'Paragraph tag with emphasis and bold': '<p>Hello <strong><em>world</em></strong></p>',
     'Unordered list': '<ul><li>Hello</li><li>world</li></ul>',
     'Ordered list': '<ol><li>Hello</li><li>world</li></ol>',
-    'List with emphasis': '<ul><li><strong>Hell</strong>o</li><li><em>world</em></li></ul>',
+    'List with bold': '<ul><li><strong>world</strong></li></ul>',
+    'List with emphasis': '<ul><li><em>world</em></li></ul>',
     'List with list': '<ul><li>Fruits:<ul><li>Orange</li><li>Apple</li></ul></li><li>Veggies<ul><li>Ocra</li><li>Peas</li></ul></li></ul>',
     'List with list with emphasis': '<ul><li>Fruits:<ul><li><em>the</em> orange</li></ul></li></ul>',
 }
@@ -20,6 +21,7 @@ for (const [description, snippet] of Object.entries(testSnippets)) {
     describe(description, function() {
         it('should be unchanged after converting from HTML and back', async () => {
             const wordFromHtml = await docxFromHtml(snippet)
+            fs.writeFileSync(description + '.docx', wordFromHtml)
             const htmlFromWord = await convertToHtml({ buffer: wordFromHtml})
             expect(htmlFromWord.value).to.be.equal(snippet)
         })
