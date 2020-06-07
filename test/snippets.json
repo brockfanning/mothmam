@@ -1,0 +1,62 @@
+[
+    {
+        "description": "Paragraph tag",
+        "snippet": "<p>Hello world</p>",
+        "tags": ["paragraph"]
+    },
+    {
+        "description": "H1 and paragraph tags",
+        "snippet": "<h1>Hello world</h1><p>Foobar</p>",
+        "tags": ["paragraph", "headings"]
+    },
+    {
+        "description": "Paragraph tag with emphasis",
+        "snippet": "<p>Hello <em>world</em></p>",
+        "tags": ["paragraph", "emphasis"]
+    },
+    {
+        "description": "Paragraph tag with bold",
+        "snippet": "<p>Hello <strong>world</strong></p>",
+        "tags": ["paragraph", "emphasis"]
+    },
+    {
+        "description": "Paragraph tag with emphasis and bold",
+        "snippet": "<p>Hello <strong><em>world</em></strong></p>",
+        "tags": ["paragraph", "emphasis"]
+    },
+    {
+        "description": "Unordered list",
+        "snippet": "<ul><li>Hello</li><li>world</li></ul>",
+        "tags": ["list"]
+    },
+    {
+        "description": "Ordered list",
+        "snippet": "<ol><li>Hello</li><li>world</li></ol>",
+        "tags": ["list"]
+    },
+    {
+        "description": "List with bold",
+        "snippet": "<ul><li><strong>world</strong></li></ul>",
+        "tags": ["list", "emphasis"]
+    },
+    {
+        "description": "List with emphasis",
+        "snippet": "<ul><li><em>world</em></li></ul>",
+        "tags": ["list", "emphasis"]
+    },
+    {
+        "description": "List with list",
+        "snippet": "<ul><li>Fruits:<ul><li>Orange</li><li>Apple</li></ul></li><li>Veggies<ul><li>Ocra</li><li>Peas</li></ul></li></ul>",
+        "tags": ["list"]
+    },
+    {
+        "description": "List with list with emphasis",
+        "snippet": "<ul><li>Fruits:<ul><li><em>the</em> orange</li></ul></li></ul>",
+        "tags": ["list", "emphasis"]
+    },
+    {
+        "description": "Unordered list with ordered list",
+        "snippet": "<ul><li>Fruits:<ol><li>Orange</li><li>Apple</li></ol></li><li>Veggies<ul><li>Ocra</li><li>Peas</li></ul></li></ul>",
+        "tags": ["list"]
+    }
+]
